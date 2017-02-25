@@ -1,0 +1,203 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Blinky
+LIBS:Blinky-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 7555 U1
+U 1 1 58B11DDE
+P 6350 3725
+F 0 "U1" H 5925 3225 60  0000 C CNN
+F 1 "7555" H 6350 3725 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6425 3475 60  0001 C CNN
+F 3 "" H 6425 3475 60  0001 C CNN
+	1    6350 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 58B1204A
+P 4900 3225
+F 0 "R1" V 4980 3225 50  0000 C CNN
+F 1 "1K" V 4900 3225 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 3225 50  0001 C CNN
+F 3 "" H 4900 3225 50  0000 C CNN
+	1    4900 3225
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 58B1218F
+P 4900 3800
+F 0 "R2" V 4980 3800 50  0000 C CNN
+F 1 "470K" V 4900 3800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 3800 50  0001 C CNN
+F 3 "" H 4900 3800 50  0000 C CNN
+	1    4900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 58B121C9
+P 4900 4350
+F 0 "C1" H 4925 4450 50  0000 L CNN
+F 1 "1u" H 4925 4250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4938 4200 50  0001 C CNN
+F 3 "" H 4900 4350 50  0000 C CNN
+	1    4900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 58B12464
+P 7000 3725
+F 0 "R3" V 7080 3725 50  0000 C CNN
+F 1 "1K" V 7000 3725 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6930 3725 50  0001 C CNN
+F 3 "" H 7000 3725 50  0000 C CNN
+	1    7000 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_ALT D1
+U 1 1 58B12545
+P 7000 4325
+F 0 "D1" H 7000 4425 50  0000 C CNN
+F 1 "LED_ALT" H 7000 4225 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 7000 4325 50  0001 C CNN
+F 3 "" H 7000 4325 50  0000 C CNN
+	1    7000 4325
+	0    -1   -1   0   
+$EndComp
+Text Label 5475 2725 0    60   ~ 0
+VDD
+$Comp
+L GND #PWR01
+U 1 1 58B12913
+P 5675 4925
+F 0 "#PWR01" H 5675 4675 50  0001 C CNN
+F 1 "GND" H 5675 4775 50  0000 C CNN
+F 2 "" H 5675 4925 50  0000 C CNN
+F 3 "" H 5675 4925 50  0000 C CNN
+	1    5675 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT1
+U 1 1 58B129B8
+P 4025 3600
+F 0 "BT1" H 4125 3700 50  0000 L CNN
+F 1 "Battery" H 4125 3600 50  0000 L CNN
+F 2 "Blinky:S8211R" V 4025 3660 50  0001 C CNN
+F 3 "" V 4025 3660 50  0000 C CNN
+	1    4025 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3550 4900 3550
+Wire Wire Line
+	4900 3375 4900 3650
+Connection ~ 4900 3550
+Wire Wire Line
+	5650 3925 5450 3925
+Wire Wire Line
+	5450 3675 5450 4075
+Wire Wire Line
+	5450 3675 5650 3675
+Wire Wire Line
+	4900 3950 4900 4200
+Wire Wire Line
+	5450 4075 4900 4075
+Connection ~ 5450 3925
+Connection ~ 4900 4075
+Wire Wire Line
+	4900 4500 4900 4700
+Wire Wire Line
+	4900 4700 7000 4700
+Wire Wire Line
+	6175 4700 6175 4350
+Wire Wire Line
+	6725 3500 7000 3500
+Wire Wire Line
+	7000 3500 7000 3575
+Wire Wire Line
+	7000 3875 7000 4175
+Wire Wire Line
+	7000 4700 7000 4475
+Connection ~ 6175 4700
+Wire Wire Line
+	4900 3075 4900 2725
+Wire Wire Line
+	4900 2725 6425 2725
+Wire Wire Line
+	6150 2725 6150 2925
+Wire Wire Line
+	6425 2725 6425 2925
+Connection ~ 6150 2725
+Wire Wire Line
+	5675 4925 5675 4700
+Connection ~ 5675 4700
+Wire Wire Line
+	4025 3400 4025 3150
+Wire Wire Line
+	4025 3150 4275 3150
+Wire Wire Line
+	4025 3800 4025 4150
+$Comp
+L GND #PWR02
+U 1 1 58B12D01
+P 4025 4150
+F 0 "#PWR02" H 4025 3900 50  0001 C CNN
+F 1 "GND" H 4025 4000 50  0000 C CNN
+F 2 "" H 4025 4150 50  0000 C CNN
+F 3 "" H 4025 4150 50  0000 C CNN
+	1    4025 4150
+	1    0    0    -1  
+$EndComp
+Text Label 4100 3150 0    60   ~ 0
+VDD
+Wire Wire Line
+	6425 4350 6425 4700
+Connection ~ 6425 4700
+$EndSCHEMATC
